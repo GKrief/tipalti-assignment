@@ -1,0 +1,29 @@
+{
+   "products":[
+      {
+         "id":"k511bn",
+         "name":"Multi-Function Backpack",
+         "color":"#b3e5fc"
+      },
+      {
+         "id":"nQnOaN",
+         "name":"2-In-1 Breathable Two-Sided 3\" Mini/Portable Crib Mattress",
+         "color":"#dcedc8"
+      },
+      {
+         "id":"0UQIBe",
+         "name":"Manual Pencil Sharpener",
+		 "color":"#fff9c4"
+      },         
+      {
+         "id":"sESbOp",
+         "name":"Battery Operated Smoke and Carbon Monoxide Alarm",
+         "color":"#ffccbc"
+      },
+	  {
+         "id":"KEOWTx",
+         "name":"13 Amp Corded Lawn Mower",
+         "color":"#d1c4e9"
+      }
+   ]
+}
