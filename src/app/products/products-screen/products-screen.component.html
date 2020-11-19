@@ -1,4 +1,4 @@
-<div class="mb-5" *ngFor="let product of prodcuts$; let i = index" [ngStyle]="{'border-color': product.color}" style="border: 5px solid; max-width: 300px">
+<div class="mb-5" *ngFor="let product of products$; let i = index" [ngStyle]="{'border-color': product.color}" style="border: 5px solid; max-width: 300px">
   <input type="checkbox" [checked]="checkBoxes[i]" (change)="onCheck($event, product.id)">
   <span style="border: 5px solid" [ngStyle]="{'border-color': product.color}">{{product.id}} | {{product.name}}</span>
 </div>

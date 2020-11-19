@@ -10,7 +10,7 @@ import {MS_UNTIL_TIMEOUT} from '../../core/constants/global';
   styleUrls: ['./products-screen.component.css']
 })
 export class ProductsScreenComponent implements OnInit {
-  prodcuts$: Product[];
+  products$: Product[];
   checkBoxes: boolean[];
 
   constructor(private productsService: ProductsService) {
@@ -18,16 +18,16 @@ export class ProductsScreenComponent implements OnInit {
 
   ngOnInit(): void {
     this.productsService.getProducts().pipe(first()).subscribe(data => {
-      this.prodcuts$ = data;
-      this.prodcuts$.sort((a, b) => a.id > b.id ? 1 : -1);
+      this.products$ = data;
+      this.products$.sort((a, b) => a.id > b.id ? 1 : -1);
       this.initStatusOfCheckboxes();
     });
   }
 
   private initStatusOfCheckboxes(): void {
-    this.checkBoxes = Array(this.prodcuts$.length).fill(false);
-    for (let i = 0; i < this.prodcuts$.length; i++) {
-      this.checkBoxes[i] = localStorage.getItem(this.prodcuts$[i].id) ? true : false;
+    this.checkBoxes = Array(this.products$.length).fill(false);
+    for (let i = 0; i < this.products$.length; i++) {
+      this.checkBoxes[i] = localStorage.getItem(this.products$[i].id) ? true : false;
     }
   }
 
