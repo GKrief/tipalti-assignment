@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Product} from '../../core/models/product';
 import {ProductsService} from '../products.service';
 import {first} from 'rxjs/operators';
-import set = Reflect.set;
+import {MS_UNTIL_TIMEOUT} from '../../core/constants/global';
 
 @Component({
   selector: 'app-products-screen',
@@ -41,6 +41,6 @@ export class ProductsScreenComponent implements OnInit {
   }
 
   private mockApiCall(id: string): Promise<void> {
-    return new Promise<void>((resolve) => setTimeout(() => console.log(id + ' checked!'), 2000));
+    return new Promise<void>((resolve) => setTimeout(() => console.log(id + ' checked!'), MS_UNTIL_TIMEOUT));
   }
 }
